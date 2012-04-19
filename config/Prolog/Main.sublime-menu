@@ -1,0 +1,35 @@
+[
+     {
+        "id": "tools",
+        "children":
+        [{
+            "caption": "SublimeREPL",
+            "mnemonic": "r",
+            "id": "SublimeREPL",
+            "children":
+            [
+                {"command": "repl_open",
+                 "id": "repl_prolog" ,
+                 "caption": "Prolog",
+                 "mnemonic": "p",
+                 "args": {
+                    "type": "subprocess",
+                    "encoding": "utf8",
+                    "external_id": "prolog",
+                    "cmd": {"linux": ["swipl", "--terminal=none"],
+                            "osx": ["swipl", "--terminal=none"],
+                            "windows": ["swipl.bat", "--terminal=none"]},
+                    "soft_quit": "\nhalt.\n",
+                    "cwd": "$file_path",
+                    "cmd_postfix": "\n", 
+                    "extend_env": {"osx": {"PATH": "{PATH}:/usr/local/bin"},
+                                   "linux": {"PATH": "{PATH}:/usr/local/bin"},
+                                   "windows": {}},
+                    "suppress_echo": false, 
+                    "syntax": "Packages/Prolog/Prolog.tmLanguage"
+                    }
+                }
+            ]
+        }]
+    }
+]

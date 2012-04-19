@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "SublimeREPL: Grails",
+        "command": "run_existing_window_command", "args":
+        {
+            "id": "repl_grails",
+            "file": "config/Grails/Main.sublime-menu"
+        }
+    }
+]
